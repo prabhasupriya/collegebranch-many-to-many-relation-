@@ -1,0 +1,21 @@
+package collegebranch;
+import java.util.HashMap;
+import java.util.ArrayList;
+public class Branchhelper {
+	HashMap<String ,Branchinfo> branchlist = new HashMap<>();
+	public boolean addbranch(Branchinfo br) {
+		if(branchlist.containsKey(br.getBranchid())) 
+		{
+			return false;
+					}
+	branchlist.put(br.getBranchid(), br);
+	return true;
+}
+	
+	//delete branch
+	public boolean deletebranch(Branchinfo b) {
+		return branchlist.remove(b.getBranchid(),b);
+	}
+	
+
+}
