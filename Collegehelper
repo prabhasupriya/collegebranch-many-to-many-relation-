@@ -1,0 +1,31 @@
+package collegebranch;
+import java.util.ArrayList;
+import java.util.HashMap;
+public class Collegehelper {
+	HashMap<String ,Collegeinfo> collegelist = new HashMap<>();
+	//add colleges into list 
+	public boolean addcollege(Collegeinfo c) {
+		if(collegelist.containsKey(c.getCollegeid())) {
+			return false;
+		}
+		collegelist.put(c.getCollegeid() ,c );
+		return true;
+	}
+	
+	//delete a college
+	public Collegeinfo deletecollegebycode(String collegecode) {
+		return collegelist.remove(collegecode);
+	}
+	
+	//get college by id
+	public Collegeinfo getcollegebyid(String collegeid) {
+		return collegelist.get(collegeid);
+	}
+	
+	// getallcollegeslist
+	public HashMap<String , Collegeinfo> getallcolleges() {
+		return collegelist;
+	}
+	
+	
+}
