@@ -1,0 +1,57 @@
+package collegebranch;
+import java.util.List;
+import java.util.ArrayList;
+public class Collegeinfo {
+	private String collegeid;
+	private String collegename;
+	private  Branchinfo branch;
+	private boolean iscoeducation;
+	private ArrayList<String> extrafacilities;
+	public Collegeinfo() {}
+	
+	public Collegeinfo(String collegeid, String collegename, Branchinfo branch, boolean iscoeducation,
+			ArrayList<String> extrafacilities) {
+		
+		this.collegeid = collegeid;
+		this.collegename = collegename;
+		this.branch = branch;
+		this.iscoeducation = iscoeducation;
+		this.extrafacilities = extrafacilities;
+	}
+	
+	public String getCollegeid() {
+		return collegeid;
+	}
+	public void setCollegeid(String collegeid) {
+		this.collegeid = collegeid;
+	}
+	public String getCollegename() {
+		return collegename;
+	}
+	public void setCollegename(String collegename) {
+		this.collegename = collegename;
+	}
+	public Branchinfo getBranch(){
+		return branch;
+	}
+	public void setBranch(Branchinfo branch) {
+		this.branch = branch;
+	}
+	public boolean getIscoeducation() {
+		return iscoeducation;
+	}
+	public  void setIscoeducation(boolean iscoeducation) {
+		this.iscoeducation = iscoeducation;
+	}
+	public void setExtrafacilities( ArrayList<String> extrafacilities) {
+		this.extrafacilities= extrafacilities;
+	}
+	public  ArrayList<String> getExtrafacilities(){
+		return extrafacilities;
+	}
+	
+//tostring method
+	public String toString() {
+		return "College id " + collegeid +" college name " + collegename + " branch " + branch + " iscoeducation " + iscoeducation + "extrafacilities in college " + extrafacilities + "\n" ;
+	}
+}
