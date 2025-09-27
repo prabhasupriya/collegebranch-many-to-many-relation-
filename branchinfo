@@ -1,0 +1,37 @@
+package collegebranch;
+import java.util.ArrayList;
+public class Branchinfo {
+	private String branchid;
+	private String branchname;
+	private ArrayList<String> subjects;
+	public Branchinfo(String branchid, String branchname,  ArrayList<String> subjects) {
+		this.branchid = branchid;
+		this.branchname = branchname;
+		this.subjects = subjects;
+	}
+	public String getBranchid() {
+		return branchid;
+	}
+	public void setBranchid(String branchid) {
+		this.branchid = branchid;
+	}
+	public String getBranchname() {
+		return branchname;
+	}
+	public void setBranchname(String branchname) {
+		this.branchname = branchname;
+	}
+	public  ArrayList<String> getSubjects() {
+		return subjects;
+	}
+	public void setSubjects( ArrayList<String> subjects) {
+		this.subjects = subjects;
+	}
+	@Override
+	public String toString() {
+		return "Branchinfo [branchid=" + branchid + ", branchname=" + branchname + ", subjects=" + subjects + "]";
+	}
+	
+	
+
+}
