@@ -1,0 +1,75 @@
+package collegebranch;
+
+import java.util.ArrayList;
+
+public class Maintesert{
+    public static void main(String[] args) {
+Branchhelper bh = new Branchhelper();
+        Collegehelper copeartion = new Collegehelper();
+        
+        ArrayList<String> csesubject = new ArrayList<>();
+        csesubject.add("Computer");
+        csesubject.add("OS");
+        csesubject.add("Java");
+        csesubject.add("DSA");
+        csesubject.add("Python");
+        
+        ArrayList<String> ecesubject = new ArrayList<>();
+        csesubject.add("circuits");
+        csesubject.add("maths");
+        csesubject.add("pyh");
+        csesubject.add("embeddings");
+        csesubject.add("Python");
+        
+        ArrayList<String> aimlsubject = new ArrayList<>();
+        csesubject.add("ai");
+        csesubject.add("OS");
+        csesubject.add("ml");
+        csesubject.add("dl");
+        csesubject.add("Python");
+        
+        ArrayList<String> dssubject = new ArrayList<>();
+        csesubject.add("Computer");
+        csesubject.add("OS");
+        csesubject.add("c");
+        csesubject.add("DS");
+        csesubject.add("Python");
+
+        // Create Branchinfo object
+        Branchinfo cse = new Branchinfo("111", "CSE", csesubject);
+        Branchinfo ece = new Branchinfo("222", "ece", ecesubject);
+        Branchinfo aiml= new Branchinfo("333", "aiml", aimlsubject);
+        Branchinfo ds = new Branchinfo("444", "ds", dssubject);
+
+        // Example: define facilities for college
+        ArrayList<String> eFacilities = new ArrayList<>();
+        eFacilities.add("Library");
+        eFacilities.add("Labs");
+        eFacilities.add("Sports");
+
+        ArrayList<String> eFacilities2 = new ArrayList<>();
+        eFacilities.add("Library");
+        eFacilities.add("Labs");
+        eFacilities.add("Sports");
+
+        ArrayList<String> eFacilities3= new ArrayList<>();
+        eFacilities.add("groud");
+        eFacilities.add("Labs");
+        eFacilities.add("Sports");
+
+        ArrayList<String> eFacilities4 = new ArrayList<>();
+        eFacilities.add("Library");
+        eFacilities.add("Labs");
+        eFacilities.add("Sports");
+
+        // Create Collegeinfo object
+        Collegeinfo ci = new Collegeinfo("101", "AEC", cse, true , eFacilities);
+
+        // Print some details
+        
+        System.out.println( copeartion.addcollege(ci));
+        System.out.println( bh.addbranch(cse));
+        
+        System.out.println(copeartion.getcollegebyid("101"));
+    }
+}
